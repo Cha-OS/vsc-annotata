@@ -1,0 +1,117 @@
+{
+    "name": "annotata",
+    "displayName": "Annotata",
+    "description": "Annotates Markdown and HTML",
+    "version": "0.0.1",
+    "publisher": "Cha-OS.org",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.annotateDefinition"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.annotateDefinition",
+                "title": "Annotata:Definition"
+            },
+            {
+                "command": "extension.annotateImportant",
+                "title": "Annotata:Important"
+            },
+            {
+                "command": "extension.annotateError",
+                "title": "Annotata:Error"
+            },
+            {
+                "command": "extension.annotateComment",
+                "title": "Annotata:Comment"
+            },
+            {
+                "command": "extension.annotateBold",
+                "title": "Annotata:Bold"
+            },
+            {
+                "command": "extension.annotateItalic",
+                "title": "Annotata:Italic"
+            },
+            {
+                "command": "extension.nativeBold",
+                "title": "Annotata:NativeBold"
+            },
+            {
+                "command": "extension.nativeItalic",
+                "title": "Annotata:NativeItalic"
+            }
+        ],
+		"keybindings": [
+			{
+				"command": "extension.annotateDefinition",
+				"key": "shift+win+a d",
+				"mac": "shift+cmd+a d",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.annotateImportant",
+				"key": "shift+win+a m",
+				"mac": "shift+cmd+a m",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.annotateError",
+				"key": "shift+win+a e",
+				"mac": "shift+cmd+a e",
+				"when": "editorTextFocus"
+			},{
+				"command": "extension.annotateComment",
+				"key": "shift+win+a c",
+				"mac": "shift+cmd+a c",
+				"when": "editorTextFocus"
+			},
+            {
+				"command": "extension.annotateBold",
+				"key": "shift+win+a b",
+				"mac": "shift+cmd+a b",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.annotateItalic",
+				"key": "shift+win+a i",
+				"mac": "shift+cmd+a i",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.nativeBold",
+				"key": "ctrl+b",
+				"mac": "cmd+b",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.nativeItalic",
+				"key": "ctrl+i",
+				"mac": "cmd+i",
+				"when": "editorTextFocus"
+			}
+		]
+
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint ./src/*.ts",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.0",
+        "tslint": "^5.19.0",
+        "@types/vscode": "^1.32.0"
+    },
+    "peeDevDependencies": {
+        "typescript": "^3.8.3"
+    }
+}
