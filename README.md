@@ -22,7 +22,8 @@ This is an example that shows you how to create a command which makes changes to
 
 ## Running the Sample
 
-- Run `npm install` in terminal to install dependencies
-- Run the `Extension` target in the Debug View. This will:
+- Run `yarn` in terminal to install dependencies
+- Open VSC for the `colabo-lab/vsc/vsc-annotata/Annotata.code-workspace` workspace
+- Run the `AnnoTata Extension` target in the Debug View. This will:
 	- Start a task `npm: watch` to compile the code
 	- Run the extension in a new VS Code window

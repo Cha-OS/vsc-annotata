@@ -13,7 +13,7 @@
     "activationEvents": [
         "onCommand:extension.annotateDefinition"
     ],
-    "main": "./out/extension",
+    "main": "./dist/extension",
     "contributes": {
         "commands": [
             {
